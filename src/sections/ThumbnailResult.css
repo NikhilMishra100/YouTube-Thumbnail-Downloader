@@ -1,0 +1,242 @@
+/* ========================================
+   Thumbnail Result Section
+======================================== */
+
+.thumbnail-result {
+  padding: 120px 0 72px;
+
+  background-color: var(--color-background);
+
+  scroll-margin-top: 80px;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* ========================================
+   Result Container
+======================================== */
+
+.thumbnail-result__container {
+  width: min(1180px, calc(100% - 48px));
+
+  margin: 0 auto;
+  padding: 28px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+
+  gap: 32px;
+
+  align-items: center;
+
+  background-color: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 18px;
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* ========================================
+   Thumbnail Preview
+======================================== */
+
+.thumbnail-result__preview {
+  min-width: 0;
+}
+
+.thumbnail-result__image {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  background-color: var(--color-surface-secondary);
+}
+
+/* ========================================
+   Success Message
+======================================== */
+
+.thumbnail-result__success {
+  margin: 10px 0 0;
+
+  font-size: 13px;
+
+  color: #16a34a;
+}
+
+/* ========================================
+   Result Information
+======================================== */
+
+.thumbnail-result__info {
+  min-width: 0;
+}
+
+.thumbnail-result__title {
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 1.25;
+
+  color: var(--color-text);
+
+  transition: color 0.25s ease;
+}
+
+.thumbnail-result__description {
+  margin: 10px 0 24px;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  color: var(--color-text-secondary);
+
+  transition: color 0.25s ease;
+}
+
+/* ========================================
+   Download Options
+======================================== */
+
+.thumbnail-result__options {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.thumbnail-result__option {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  padding: 14px 16px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 10px;
+
+  background-color: var(--color-surface);
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.2s ease;
+}
+
+.thumbnail-result__option:hover {
+  border-color: var(--color-primary);
+}
+
+/* ========================================
+   Quality Information
+======================================== */
+
+.thumbnail-result__quality {
+  display: block;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: var(--color-text);
+
+  transition: color 0.25s ease;
+}
+
+.thumbnail-result__resolution {
+  display: block;
+
+  margin-top: 4px;
+
+  font-size: 12px;
+
+  color: var(--color-text-secondary);
+
+  transition: color 0.25s ease;
+}
+
+/* ========================================
+   Download Button
+======================================== */
+
+.thumbnail-result__download {
+  flex-shrink: 0;
+
+  padding: 9px 16px;
+
+  border: 0;
+  border-radius: 7px;
+
+  background-color: var(--color-primary);
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.thumbnail-result__download:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.thumbnail-result__download:active {
+  transform: translateY(1px);
+}
+
+/* ========================================
+   Tablet
+======================================== */
+
+@media (max-width: 900px) {
+  .thumbnail-result__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 767px) {
+  .thumbnail-result {
+    padding: 48px 0;
+  }
+
+  .thumbnail-result__container {
+    width: min(100% - 32px, 600px);
+
+    padding: 18px;
+
+    gap: 24px;
+
+    border-radius: 14px;
+  }
+
+  .thumbnail-result__title {
+    font-size: 20px;
+  }
+
+  .thumbnail-result__option {
+    padding: 12px;
+  }
+}

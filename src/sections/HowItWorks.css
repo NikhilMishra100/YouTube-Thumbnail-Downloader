@@ -1,0 +1,287 @@
+/* ========================================
+   How It Works Section
+======================================== */
+
+.how-it-works {
+  width: 100%;
+
+  padding: 88px 0;
+
+  background-color: var(--color-surface);
+
+  transition: background-color 0.25s ease;
+}
+
+/* ========================================
+   Container
+======================================== */
+
+.how-it-works__container {
+  width: min(1180px, calc(100% - 48px));
+
+  margin: 0 auto;
+}
+
+/* ========================================
+   Section Header
+======================================== */
+
+.how-it-works__header {
+  max-width: 620px;
+
+  margin: 0 auto 42px;
+
+  text-align: center;
+}
+
+.how-it-works__badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 9px;
+
+  border-radius: 6px;
+
+  background-color: var(--color-primary-soft);
+
+  color: var(--color-primary);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.04em;
+}
+
+.how-it-works__title {
+  margin: 12px 0 0;
+
+  font-size: clamp(28px, 3vw, 36px);
+
+  line-height: 1.15;
+
+  letter-spacing: -0.025em;
+
+  font-weight: 800;
+
+  color: var(--color-text);
+
+  transition: color 0.25s ease;
+}
+
+.how-it-works__description {
+  margin: 12px 0 0;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  color: var(--color-text-secondary);
+
+  transition: color 0.25s ease;
+}
+
+/* ========================================
+   Steps Grid
+======================================== */
+
+.how-it-works__steps {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+}
+
+/* ========================================
+   Step Card
+======================================== */
+
+.how-it-works__step {
+  position: relative;
+
+  min-width: 0;
+
+  padding: 24px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 12px;
+
+  background-color: var(--color-surface-secondary);
+
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.how-it-works__step:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--color-primary);
+}
+
+/* ========================================
+   Step Top
+======================================== */
+
+.how-it-works__step-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+/* ========================================
+   Icon
+======================================== */
+
+.how-it-works__icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background-color: var(--color-primary-soft);
+
+  color: var(--color-primary);
+}
+
+.how-it-works__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ========================================
+   Step Number
+======================================== */
+
+.how-it-works__number {
+  font-size: 28px;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  color: var(--color-number);
+
+  user-select: none;
+}
+
+/* ========================================
+   Step Content
+======================================== */
+
+.how-it-works__step-title {
+  margin: 0 0 8px;
+
+  font-size: 15px;
+
+  line-height: 1.35;
+
+  font-weight: 700;
+
+  color: var(--color-text);
+
+  transition: color 0.25s ease;
+}
+
+.how-it-works__step-description {
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.65;
+
+  color: var(--color-text-secondary);
+
+  transition: color 0.25s ease;
+}
+
+/* ========================================
+   Tablet
+======================================== */
+
+@media (max-width: 900px) {
+  .how-it-works {
+    padding: 72px 0;
+  }
+
+  .how-it-works__steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .how-it-works__step:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ========================================
+   Mobile
+   Below 768px
+======================================== */
+
+@media (max-width: 767px) {
+  .how-it-works {
+    padding: 64px 0;
+  }
+
+  .how-it-works__container {
+    width: min(100% - 32px, 600px);
+  }
+
+  .how-it-works__header {
+    margin-bottom: 32px;
+  }
+
+  .how-it-works__title {
+    font-size: 28px;
+  }
+
+  .how-it-works__description {
+    font-size: 13px;
+  }
+
+  .how-it-works__steps {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .how-it-works__step:last-child {
+    grid-column: auto;
+  }
+
+  .how-it-works__step {
+    padding: 20px;
+  }
+}
+
+/* ========================================
+   Small Mobile
+   Below 400px
+======================================== */
+
+@media (max-width: 399px) {
+  .how-it-works {
+    padding: 56px 0;
+  }
+
+  .how-it-works__container {
+    width: calc(100% - 28px);
+  }
+
+  .how-it-works__step {
+    padding: 18px;
+  }
+}
